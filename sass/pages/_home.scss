@@ -1,110 +1,155 @@
 .section-about {
-	background-color: $color-grey-light-1;
-	padding: 25rem 0;
-	margin-top: -20vh; //To adjust the section to top with skewed section  
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -20vh; //To adjust the section to top with skewed section
 
-    @include respond(tab-port) {
-    	padding: 27rem 0;
-    }	
+  @include respond(tab-land) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include respond(tab-port) {
+    padding: 27rem 0;
+  }
 }
 
 .section-features {
-	padding: 20rem 0;
-	background-image: linear-gradient(
-		to right bottom, 
-		rgba($color-primary-light, 0.8), 
-		rgba($color-primary-dark, 0.8)), 
-	url(../img/nat-4-small.jpg);
-	background-size: cover;
-    transform: skewY(-7deg);
-    margin-top: -10rem;
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4-small.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
 
-    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-           only screen and (-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em),
-           only screen and (min-width: 125em) {
-        background-image: linear-gradient(
-        to right bottom, 
-        rgba($color-primary-light, 0.8), 
-        rgba($color-primary-dark, 0.8)), 
-        url(../img/nat-4.jpg);
-    }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4.jpg);
+  }
 
-    & > * {      //direct child
-      transform: skewY(7deg);
-    }
+  & > * {
+    //direct child
+    transform: skewY(7deg);
+  }
 
-    @include respond(tab-port) {
-    	padding: 10rem 0;
-    }	
+  @include respond(tab-land) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-tours {
-	background-color: $color-grey-light-1;
-	padding: 25rem 0 15rem 0;
-	margin-top: -10rem; //To adjust the section to top with skewed section
-    
-    @include respond(tab-port) {
-    	padding: 20rem 0 10rem 0;
-    }
+  background-color: $color-grey-light-1;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem; //To adjust the section to top with skewed section
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .section-stories {
-	padding: 15rem 0;
-	//background-color: $color-grey-light-1;
-	position: relative;
-    
-    @include respond(tab-port) {
-    	padding: 10rem 0;
-    }
+  padding: 15rem 0;
+  //background-color: $color-grey-light-1;
+  position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
-	padding: 15rem 0;
-	background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);    
-    
-    @include respond(tab-port) {
-    	padding: 10rem 0;
-    }
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .book {
-	background-image:  linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);    
-	background-size: 100%; //100% here same as cover
-	//height: 50rem;
-	border-radius: 0.3rem; 
-	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: 100%; //100% here same as cover
+  //height: 50rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
-    @include respond(tab-land) { //<=1200
-       background-image:  linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 65%, transparent 65%), url(../img/nat-10-small.jpg);
-       background-size: cover;
+  @include respond(tab-land) {
+    //<=1200
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10-small.jpg);
+    background-size: cover;
 
-       @media only screen and (min-resolution: 192dpi), 
-              only screen and (-webkit-min-device-pixel-ratio: 2) {
-            background-image:  linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
-            background-size: cover;
-        }       
+    @media only screen and (min-resolution: 192dpi),
+      only screen and (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(
+          105deg,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 65%,
+          transparent 65%
+        ),
+        url(../img/nat-10.jpg);
+      background-size: cover;
+    }
+  }
+
+  @include respond(tab-port) {
+    //<=900
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-10-small.jpg);
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 100%
+        ),
+        url(../img/nat-10.jpg);
+    }
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
     }
 
-    @include respond(tab-port) {  //<=900
-       background-image:  linear-gradient(to right, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 100%), url(../img/nat-10-small.jpg); 
-
-       @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-              only screen and (-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em) {
-           background-image:  linear-gradient(to right, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 100%), url(../img/nat-10.jpg);        
-       }
+    @include respond(tab-port) {
+      width: 100%;
     }
-    
-    &__form {
-    	width: 50%;
-    	padding: 6rem; 
-
-        @include respond(tab-land) {
-            width: 65%;
-        }
-
-        @include respond(tab-port) {
-            width: 100%;
-        }
-    }
+  }
 }
-
